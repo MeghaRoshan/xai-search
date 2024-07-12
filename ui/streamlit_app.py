@@ -5,7 +5,7 @@ import streamlit as sl
 sl.header("XAI-Search")
 
 # Create a text input box for user queries
-query = sl.text_input("Enter your query")
+query = sl.text_input("Enter your query- Eg: I would like to purchase an alarm")
 
 # Check if the user has entered a query
 if query:
