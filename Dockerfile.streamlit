@@ -1,0 +1,7 @@
+FROM python:3.8.5
+WORKDIR /ui
+COPY ./ui/. .
+RUN pip install streamlit
+EXPOSE 8601
+ENTRYPOINT [ "streamlit", "run" ]
+CMD [ "streamlit_app.py", "--server.headless", "true", "--server.port=8601", "--server.address=0.0.0.0", "--server.fileWatcherType", "none", "--browser.gatherUsageStats", "false"]
